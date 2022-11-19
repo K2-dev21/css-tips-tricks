@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button{
+            font-size: 24px;
+            color: #020e26;
+            background-color: transparent;
+            border: 1px solid #020e26;
+            border-radius: 48px;
+            padding: 12px 32px;
+            transition: 0.4s;
+        }
+        button:hover{
+            color: white;
+        }
+        button::before{
+            content: '';
+            position: absolute;
+            height: 56px;
+            width: 170px;
+            z-index: -1;
+            border-radius: 48px;
+            background-color: #9796f0;
+            transform: translate(-24px, -8px);
+            transition: 0.4s;
+        }
+        button:hover::before{
+            background-color: #fbc7d4;
+            transform: translate(-33px , -13px);
+        }
+    </style>
+</head>
+<body>
+    <button>Hover me</button>
+</body>
+</html>
