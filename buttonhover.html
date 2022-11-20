@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttonhover</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #06133b;
+        }
+        button {
+            background: transparent;
+            color: #86fde8;
+            font-weight: 400;
+            font-size: 24px;
+            text-transform: uppercase;
+            padding: 16px 36px;
+            border: 5px solid #86fde8;
+            border-radius: 32px;
+            transform: translate(0);
+            overflow: hidden;
+            cursor: pointer;
+        }
+        button::before{
+            content: "";
+            position: absolute;
+            width: 8px;
+            background: #86fde8;
+            top: 0;
+            bottom: 0;
+            left: -32px;
+            transform: rotate(-16deg);
+            filter: blur(6px);
+        }
+        button:hover::before{
+            left: calc(100% + 32px);
+            transition: 0.75s;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Click Me</button>
+</body>
+
+</html>
