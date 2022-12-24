@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: #536976;
+        }
+        .main{
+            position: absolute;
+            top: 33%;
+            left: 33%;
+            width: 100px;
+            border: 1px solid #9796f0;
+            height: 5px;
+            border-radius: 10px;
+            z-index: 2;
+            padding: 2px;
+        }
+        .box{
+            border-radius: 10px;
+            width: 100px;
+            height: 5px;
+            background-color: #9796f0;
+            animation: anime 4s infinite;
+        }
+        @keyframes anime {
+            from{
+                width: 0px;
+            }
+            to{
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
