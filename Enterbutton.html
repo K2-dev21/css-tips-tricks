@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Button animation</title>
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Fasthand&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #090909;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+html {
+    font-size: 62.5%;
+}
+/* General styles end */
+.button {
+    font-family: 'Audiowide', cursive;
+    position: relative;
+    display: inline-block;
+    width: 7.5rem;
+    height: 3rem;
+    background-image: linear-gradient(90deg,
+    #a18cd1, #fbc2eb);
+    color: #090909;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition-property: width, border-radius;
+    transition-duration: 0.25s;
+    transition-delay: 0.5s;
+}
+.button:focus {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+.button > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: opacity 0.25s;
+}
+
+.button span {
+    transition-delay: 0.75s;
+}
+.button i {
+    font-size: 2rem;
+    opacity: 0;
+}
+.button:focus span {
+    opacity: 0;
+    transition-delay: 0.15s;
+}
+.button:focus i {
+    opacity: 1;
+    transition-delay: 0.75s;
+}
+
+    </style>
+    </head>
+    <body>
+        <button type="button" class="button">
+            <span>Enter</span>
+            <i class="bx bx-check"></i>
+        </button>
+    </body>
+</html>
+
